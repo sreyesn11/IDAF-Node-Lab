@@ -1,0 +1,30 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Build artifacts
+build/
+dist/
+*.bin
+*.elf
+*.map
+*.o
+*.a
+
+# NuttX generated files
+nuttx/.config
+nuttx/Make.defs
+nuttx/include/nuttx/config.h
+
+# Experiment outputs
+data/raw/
+data/processed/
+
+# VS Code local settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+toolchains/
