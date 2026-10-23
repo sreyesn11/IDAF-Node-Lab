@@ -3,14 +3,27 @@
 __pycache__/
 *.pyc
 
+# Toolchains descargados por scripts/setup.sh
+toolchains/
+
 # Build artifacts
 build/
 dist/
 *.bin
 *.elf
+*.hex
 *.map
 *.o
 *.a
+*.su
+*.lst
+*.sym
+
+# NuttX apps build metadata (p. ej. dentro de idaf-node/)
+Make.dep
+.depend
+.built
+.kconfig
 
 # NuttX generated files
 nuttx/.config
@@ -21,10 +34,17 @@ nuttx/include/nuttx/config.h
 data/raw/
 data/processed/
 
+# Local secrets
+.env
+.env.*
+
+# Configuración local de Claude Code (permisos específicos de cada máquina)
+.claude/
+
 # VS Code local settings
 .vscode/
 
 # OS files
 .DS_Store
 Thumbs.db
-toolchains/
+*:Zone.Identifier

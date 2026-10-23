@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-export IDAF_NODE_LAB="$HOME/Universidad/IDAF-Node-Lab"
+# Uso: source scripts/env.sh  (la raíz se deduce de la ubicación de este archivo)
+export IDAF_NODE_LAB="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 TOOLCHAIN_DIR="$IDAF_NODE_LAB/toolchains/riscv-none-elf-gcc"
 VENV_DIR="$IDAF_NODE_LAB/.venv"

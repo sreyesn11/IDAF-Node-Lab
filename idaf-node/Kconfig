@@ -1,0 +1,21 @@
+config IDAF
+    bool "IDAF Node Agent"
+    default y
+    help
+      Enable the IDAF Node Agent application.
+
+if IDAF
+
+config IDAF_PROGNAME
+    string "Program name"
+    default "idaf"
+
+config IDAF_PRIORITY
+    int "Task priority"
+    default 100
+
+config IDAF_STACKSIZE
+    int "Stack size"
+    default 2048
+
+endif

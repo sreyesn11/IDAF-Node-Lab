@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-PROJECT_ROOT="$HOME/Universidad/IDAF-Node-Lab"
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 TOOLCHAIN_DIR="$PROJECT_ROOT/toolchains/riscv-none-elf-gcc"
 VENV_DIR="$PROJECT_ROOT/.venv"
 
@@ -31,6 +31,7 @@ automake \
 libtool \
 pkg-config \
 genromfs \
+kconfig-frontends \
 libgmp-dev \
 libmpc-dev \
 libmpfr-dev \
@@ -109,5 +110,7 @@ echo "=========================================="
 echo " Setup completed successfully"
 echo "=========================================="
 echo
-echo "Next time run:"
-echo "source scripts/env.sh"
+echo "Next steps:"
+echo "  ./scripts/configure_nuttx.sh"
+echo "  source scripts/env.sh"
+echo "  make -C nuttx -j\$(nproc)"

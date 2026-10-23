@@ -1,0 +1,3 @@
+ifneq ($(CONFIG_IDAF),)
+CONFIGURED_APPS += $(APPDIR)/idaf
+endif
